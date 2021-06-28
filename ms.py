@@ -1,4 +1,4 @@
--*-coding:utf-8-*-
+#-*-coding:utf-8-*-
 import requests,bs4,sys,os,subprocess
 import requests,sys,random
 reload(sys)
