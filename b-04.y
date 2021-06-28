@@ -33,12 +33,31 @@ logo='''
 88888888P'  8P        Y8  88
 khan
 --------------------------------------------------
-
  Auther   : B
  GitHub   : https://github.com/Khan7515/okx
  YouTube  : Tooling gamer
  Blogspot :
+--------------------------------------------------
+                                '''
 
+username =Hello
+password =-04
+
+
+loop = 'true'
+while (loop == 'true'):
+    print logo
+    username = raw_input(' TOOL USERNAME: ')
+    if (username == CorrectUsername):
+        password = raw_input(' TOOL PASSWORD: ')
+        if (password == CorrectPassword):
+            print ' Logged in successfully as ' + username
+            time.sleep(1)
+            loop = 'false'
+        else:
+            print ' Wrong Password !'
+            os.system('xdg-open https://trickproof.blogspot.com/2020/02/new-killing-commands-of-termux-for.html')
+            os.system('clear')
     else:
         print ' Wrong Username !'
         os.system('xdg-open https://trickproof.blogspot.com/2020/02/new-killing-commands-of-termux-for.html')
