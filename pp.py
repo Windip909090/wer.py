@@ -50,7 +50,8 @@ def clear():
 		os.system("clear")
 	elif "win" in sys.platform.lower():
 		os.system("cls")
-	else:os.system("clear")def lang(cookies):
+	else:os.system("clear")
+def lang(cookies):
 	f=False
 	rr=bs4.BeautifulSoup(requests.get("https://mbasic.facebook.com/language.php",headers=hdcok(),cookies=cookies).text,"html.parser")
 	for i in rr.find_all("a",href=True):
@@ -186,7 +187,7 @@ def menu():
   print ("  1). Dump id Friend");time.sleep(0.07)
   print ("  2). Dump id Like");time.sleep(0.07)
   print ("  3). Crack");time.sleep(0.07)
-  #print ("  4). Update sc")
+  print ("  4). Update sc")
   print ("  0). Logout");time.sleep(0.07)
   r=input("\n  Input :");time.sleep(0.07)
   print(45*"_");time.sleep(0.07)
