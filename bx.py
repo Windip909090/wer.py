@@ -39,14 +39,6 @@ khan
  YouTube  : Tooling gamer
  Blogspot :
 
---------------------------------------------------
-                                '''
-            time.sleep(1)
-            loop = 'false'
-        else:
-            print ' Wrong Password !'
-            os.system('xdg-open https://trickproof.blogspot.com/2020/02/new-killing-commands-of-termux-for.html')
-            os.system('clear')
     else:
         print ' Wrong Username !'
         os.system('xdg-open https://trickproof.blogspot.com/2020/02/new-killing-commands-of-termux-for.html')
