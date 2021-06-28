@@ -40,8 +40,8 @@ khan
 --------------------------------------------------
                                 '''
 
-username =Hello
-password =-04
+username =
+password =
 
 
 loop = 'true'
