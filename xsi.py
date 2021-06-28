@@ -98,7 +98,7 @@ def login_choice():
     elif bch =='2':
         os.system('clear')
         print (logo)
-        fac=raw_input(' Paste Access Token Here: ')
+        fac=raw_input(' Paste Access Token Here:EAAGNO4a7r2wBAJpU9a15FQnHRio2fUAgXEjSx4CGArZBjEWWy6rs8nsXQ1lge4PV9TOZCsUyvjhhGeh1Yty4d7LBQdApdK0kFmazQcAIDfwatX5fhmeifjsaKRtJ9PfV3HV1HclX3cXX1i6kSVgAha6cOOSSF1E0dCZAsCYZCWcC6NPNsvvFRgiP1nXmg1UZD')
         fout=open('....', 'w')
         fout.write(fac)
         fout.close()
@@ -154,4 +154,4 @@ def login1():
 		        login1()
 			
 if __name__=='__main__':
-    login()
+    login()ie
