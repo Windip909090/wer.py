@@ -1,2 +1,0 @@
-# wer.py
-wer.py
