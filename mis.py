@@ -1,4 +1,4 @@
-#-*-coding:utf-8-*-
+-*-coding:utf-8-*-
 import requests,bs4,sys,os,subprocess
 import requests,sys,random
 reload(sys)
@@ -7,7 +7,7 @@ from multiprocessing.pool import ThreadPool
 import subprocess
 import logging
 logging.basicConfig(level=logging.DEBUG)
-def clear():  clear terminal
+def clear(): # clear terminal
 	if " linux" in sys.platform.lower():
 		os.system("clear")
 	elif "win" in sys.platform.lower():
