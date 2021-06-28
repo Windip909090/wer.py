@@ -41,19 +41,6 @@ khan
 
 --------------------------------------------------
                                 '''
-
-username =Hello
-password =-04
-
-
-loop = 'true'
-while (loop == 'true'):
-    print logo
-    username = raw_input(' TOOL USERNAME: ')
-    if (username == CorrectUsername):
-        password = raw_input(' TOOL PASSWORD: ')
-        if (password == CorrectPassword):
-            print ' Logged in successfully as ' + username
             time.sleep(1)
             loop = 'false'
         else:
